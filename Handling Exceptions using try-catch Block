@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main() {
+    try {
+        int age;
+        std::cout << "Enter your age: ";
+        std::cin >> age;
+
+        if (age < 18) {
+            throw "Underage";
+        } else {
+            std::cout << "You are eligible to vote!" << std::endl;
+        }
+    } catch (const char* msg) {
+        std::cerr << "Exception: " << msg << std::endl;
+    }
+
+    return 0;
+}
